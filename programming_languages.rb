@@ -2,7 +2,7 @@
   # your code here	  
   new_hash = {} 
 
-   languages.each do |style, description|
+   languages.each do |oo_or_func, description|
     description.each do |lang, type|
       if new_hash.has_key?(lang)
         new_hash[lang][:style] << style
