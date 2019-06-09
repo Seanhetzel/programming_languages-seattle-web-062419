@@ -1,16 +1,16 @@
-def reformat_languages(languages)
-  # your code here
-  new_hash = {}
-  oo_or_func_array = []
-  languages.each do |oo_or_func, language|
+ def reformat_languages(languages)	def reformat_languages(languages)
+  # your code here	  new_hash = {} 
 
-    language.each do |language_name, language_attributes|
-      #if language_name == language
-        
-      oo_or_func_array << oo_or_func
-      #end
-      new_hash[language_name] = {:type => language_attributes.values.join, :style => [oo_or_func_array]}
+   languages.each do |style, description|
+    description.each do |lang, type|
+      if new_hash.has_key?(lang)
+        new_hash[lang][:style] << style
+      else
+        new_hash[lang] = type
+        new_hash[lang][:style] = [style]
+      end
     end
   end
-  new_hash
-end
+
+   new_hash  
+end	end
