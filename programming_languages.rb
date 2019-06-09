@@ -4,4 +4,5 @@ def reformat_languages(languages)
   languages.each do |oo_or_func, language|
     new_hash[oo_or_func] = "test"
   end
+  new_hash
 end
