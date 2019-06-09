@@ -5,7 +5,9 @@ def reformat_languages(languages)
   languages.each do |oo_or_func, language|
 
     language.each do |language_name, language_attributes|
-      oo_or_func_array << language_name
+      if language_name == language
+        
+        oo_or_func_array << oo_or_func
       new_hash[language_name] = {:type => language_attributes.values.join, :style => [oo_or_func_array]}
     end
   end
