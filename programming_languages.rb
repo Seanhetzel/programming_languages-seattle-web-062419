@@ -3,12 +3,12 @@
   new_hash = {} 
 
    languages.each do |oo_or_func, description|
-    description.each do |lang, type|
-      if new_hash.has_key?(lang)
-        new_hash[lang][:style] << style
+    description.each do |language, type|
+      if new_hash.has_key?(language)
+        new_hash[language][:style] << style
       else
-        new_hash[lang] = type
-        new_hash[lang][:style] = [style]
+        new_hash[language] = type
+        new_hash[language][:style] = [style]
       end
     end
   end
